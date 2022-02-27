@@ -44,7 +44,7 @@ sns.heatmap(df.iloc[:,1:12].corr(),annot=True,fmt='.0%') #visualising the co-rel
 X  = df.iloc[:,2:31].values
 Y = df.iloc[:,1].values
 # 75%-TRAINING || 25%-TESTING 
-X_train,X_test,Y_train,Y_test = train_test_split(X, Y,test_size = 0.2,random_state = 0) # 75%-TRAINING || 25%-TESTING 
+X_train,X_test,Y_train,Y_test = train_test_split(X, Y,test_size = 0.2,random_state = 0) # 80%-TRAINING || 20%-TESTING 
 
 X_train = sc.fit_transform(X_train)
 X_test = sc.fit_transform(X_test)
